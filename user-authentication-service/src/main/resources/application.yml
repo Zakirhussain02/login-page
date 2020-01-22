@@ -1,0 +1,26 @@
+grokonez:
+  app:
+    jwtExpiration: 86400
+    jwtSecret: jwtErotemeSecretKey
+server:
+  port: 6084
+
+spring:
+  datasource:
+    password: root1234
+    url: jdbc:mysql://localhost:3306/logindb?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+  jpa:
+    generate-ddl: true
+    hibernate:
+      show-sql:true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
+  rabbitmq:
+    host: localhost
+    port: 5672
+
+  application:
+    name: user-authentication-service
+
